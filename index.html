@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="top-block">
+                <div class="top-block--title">
+                    <p>Премія Року <br> Кращий Магазин</p>
+                    <h2>REWARDS <br> 2024 UKRAINE</h2>
+                </div>
+                <h1 class="scrolling-text">Online voting platform</h1>
+            </div>
+        </section>
+
+        <section class="hero">
+            <img src="./images/Картинка Л.png" alt="">
+            <div class="content">
+                <button id="toggleButton"><img src="./images/arrow-white.svg" alt="arrow">Голосувати</button>
+                <h3>Виріши вже який <br>магазин краще</h3>
+            </div>
+        </section>
+
+        <section class="candidats">
+            <div class="bottom-block">
+                <ul class="bottom-block--list">
+                    <li>
+                        <h4>1 КАНДИДАТ</h4>
+                        <span>Голосів 234</span>
+                        <img src="./images/silpo.png" alt="silpo">
+                        <button class="vote-button"><img src="./images/arrow-white.svg" alt="arrow">Голосувати</button>
+                    </li>
+                    <li>
+                        <h4>2 КАНДИДАТ</h4>
+                        <span>Голосів 187</span>
+                        <img src="./images/fora.svg" alt="fora">
+                        <button class="vote-button"><img src="./images/arrow-white.svg" alt="arrow">Голосувати</button>
+                    </li>
+                    <li>
+                        <h4>3 КАНДИДАТ</h4>
+                        <span>Голосів 211</span>
+                        <img src="./images/atb.png" alt="atb">
+                        <button class="vote-button"><img src="./images/arrow-white.svg" alt="arrow">Голосувати</button>
+                    </li>
+                    <li>
+                        <h4>4 КАНДИДАТ</h4>
+                        <span>Голосів 121</span>
+                        <img src="./images/ashan.png" alt="ashan">
+                        <button class="vote-button"><img src="./images/arrow-white.svg" alt="arrow">Голосувати</button>
+                    </li>
+                </ul>
+
+                <div>
+                    <ul class="bottom-block--footer__list">
+                        <li>
+                            <img src="./images/key.svg" alt="key">
+                        </li>
+                        <li>
+                            <h3>Це безпечно!</h3>
+                        </li>
+                        <li>
+                            <p>Сайт має статус "Надійного". <br> Ваші дані в повній безпеці.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+        <div class="left">
+            <img src="./images/left.png" alt="">
+        </div>
+        <div class="right">
+            <img src="./images/right.png" alt="">
+        </div>
+
+        <!-- Модальное окно -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+
+                <p>Ми уважно стежимо за тим, щоб на нашому сайті були тільки справжні голоси</p>
+                <img width="60px" height="62px" src="./images/10900019.png" alt="instagram">
+                <button id="instagram-button">Залишити через <br> Instagram</button>
+            </div>
+        </div>
+    
+        <script src="./script/script.js"></script>
+    </body>
+    </html>
+    

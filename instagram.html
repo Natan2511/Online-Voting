@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="./css/instagram.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img width="175px" height="51px" src="./images/instagram.png" alt="Instagram Logo"></div>
+        <button class="fb-button"><img src="./images/Facebook.svg" alt="Facebook">Продовжити з Facebook</button>
+        <div class="divider">АБО</div>
+        <div class="input-container">
+            <input type="text" class="form-input" placeholder=" " id="input1" required>
+            <label for="input1" class="placeholder">Номер телефону, ім'я користувача...</label>
+        </div>
+        <div class="input-container">
+            <input type="password" class="form-input" placeholder=" " id="input2" required>
+            <label for="input2" class="placeholder">Пароль</label>
+        </div>
+        <div class="password"><a class="forgot-password" href="#">Забули пароль?</a></div>
+        <button class="login-button" disabled>Увійти</button>
+        <div class="signup">Не маєте облікового запису? <a href="#">Зареєструйтеся</a></div>
+    </div>
+
+    <footer>
+        <ul class="footer--list">
+            <li><img src="./images/home.svg" alt="Home"></li>
+            <li><img src="./images/message.svg" alt="Message"></li>
+            <li><img src="./images/reels.svg" alt="Reels"></li>
+            <li><img src="./images/search.svg" alt="Search"></li>
+            <li><img src="./images/user.svg" alt="User"></li>
+        </ul>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Неправильний пароль</div>
+            <div class="modal-body"><p style="margin-bottom: 0; color: rgb(115, 115, 115);">Введен неверный пароль.</p> <p style="margin-top: 5px; color: rgb(115, 115, 115);">Попробуйте еще раз.</p></div>
+            <div class="modal-footer">
+                <button class="close-button">Повторити</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/instagramm.js"></script>
+</body>
+</html>

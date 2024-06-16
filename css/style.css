@@ -1,0 +1,436 @@
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(..//images/VER.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    @media screen and (min-width: 768px) {
+        background-size: auto;
+        background-position: center;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Устанавливаем box-sizing для всех элементов */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 100;
+}
+
+.top-block--title {
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+}
+
+.top-block--title p {
+    color: rgb(255, 255, 255);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 9%;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 2px rgba(250,255,0,0.26);
+}
+
+.top-block--title h2 {
+    color: rgb(255, 255, 255);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 9%;
+}
+
+.top-block h1 {
+    color: rgb(255, 255, 255);
+    font-family: Open Sans;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 75px;
+    text-transform: uppercase;
+}
+
+.top-block--footer {
+    width: 100%;
+    height: 367px;
+    display: flex;
+    flex-direction: column;
+    gap: 111px;
+    align-items: center;
+
+}
+
+.top-block--footer button {
+    cursor: pointer;
+    width: 163px;
+    height: 44px;
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.19);
+    background: linear-gradient(90.00deg, rgb(50, 255, 252),rgb(255, 79, 244) 100%);
+}
+
+.top-block--footer p {
+    color: rgb(255, 255, 255);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 2px rgba(114,193,203,0.76);
+}
+
+.bottom-block--list {
+    margin-top: 63px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    li {
+        width: 154px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 25px;
+        box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+        background:white;
+        position: relative;
+    }
+
+    li::after {
+        content: "";
+        width: 95%;
+        height: 95%;
+        top: 3px;
+        position: absolute;
+        border: 1px solid #024997;
+        border-radius: 25px;
+        z-index: 1;
+    }
+
+    span{
+        margin-top: 3px;
+        margin-bottom: 10px;
+        color: black;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 15px;
+    }
+}
+
+.bottom-block--list li h4 {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.vote-button {
+    z-index: 5;
+    padding: 7px 15px;
+    margin-top: 12px;
+    display: flex;
+    gap: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgb(43, 59, 83);
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    margin-bottom: 23.5px;
+}
+
+.bottom-block--footer__list {
+    height: 53px;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    
+    box-shadow: 0px 4px 4px 0px rgba(255, 252, 252, 0.25);
+
+    @media screen and (min-width: 768px) {
+        margin: 0 20%;
+    }
+}
+
+.bottom-block--footer__list h3 {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 15.47px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+.bottom-block--footer__list p {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.top-block {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+
+.scrolling-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll-text 10s linear infinite;
+    z-index: 101;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    @keyframes scroll-text {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-85%);
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    @keyframes scroll-text {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-60%);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    @keyframes scroll-text {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-45%);
+        }
+    }
+}
+
+
+/* Стили для модального окна */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    overflow:hidden;
+    top: 25%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin: 15% auto;
+    padding: 25px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+    background: white;
+
+    @media screen and (min-width: 769px) {
+        top: 1%;
+    }
+
+    @media screen and (min-width: 770px) and (max-width:1024px) { 
+        top: 20%;
+    }
+
+    p{
+        width: 190px;
+        height: 20px;
+        color: black;
+        font-family: Montserrat;
+        font-size: 8px;
+        font-weight: 700;
+        line-height: 10px;
+    }
+
+    button{
+        padding: 6px 39px;
+        border: 1px solid black;
+        border-radius: 25px;
+        background: transparent;
+
+        color: black;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 18px;
+        cursor: pointer;
+
+        &:hover{
+            border: 1px solid gray;
+            color: gray;
+        }
+    }
+}
+
+.modal-content::after {
+    content: "";
+    width: 98%;
+    height: 96%;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 25px;
+    z-index: -1;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.left{
+    position: absolute;
+    top: 0;
+}
+.right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hero {
+    width: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero img {
+    object-fit: cover; /* Изображение будет покрывать весь контейнер */
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        gap: 55px;
+    }
+}
+
+.hero h3 {
+    color: rgb(255, 255, 255);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-shadow: 4px 3px 0px rgba(0,0,0,0.6);
+}
+
+.hero button {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    justify-content: center;
+    gap: 9px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    border-radius: 5px;
+
+    background: linear-gradient(90.00deg, rgb(0, 0, 0) -1.77%,rgb(0, 0, 0) 98.23%);
+}
+
+.hero button:hover {
+    background-color: #7128C1;
+    color: #ffffff;
+}
+
+.candidats {
+    position: relative; /* Для использования позиционирования absolute внутри */
+    opacity: 0;
+    transform: translateY(20px); /* Начальное смещение вниз */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none; /* Скрываем блок */
+}
+
+.candidats.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
